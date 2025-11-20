@@ -8,6 +8,7 @@ import as from "../../../src/assets/Image/js.webp"
 import aw from "../../../src/assets/Image/react.webp"
 import ad from "../../../src/assets/Image/next.webp"
 import af from "../../../src/assets/Image/angular.webp"
+import Image from "../../../src/assets/Image/card2image.webp"
 const Home = () => {
     return (
         <div>
@@ -108,7 +109,7 @@ const Home = () => {
                         {/* Card 2 */}
                         <div className="rounded-xl shadow-lg bg-green-100 hover:scale-105 transition duration-500 overflow-hidden">
                             <img
-                                src="/project2.jpg"
+                                src={Image}
                                 alt="Project 2"
                                 className="w-full h-48 object-cover"
                             />
