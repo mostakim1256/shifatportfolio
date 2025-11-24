@@ -73,7 +73,7 @@ const Project = () => {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-6">
-                            <h3 className="text-2xl font-semibold mb-2 text-black dark:text-black">
+                                                         <h3 className="text-2xl font-semibold mb-2 text-black dark:text-black">
                                 React Landing Page
                             </h3>
                             <p className="text-gray-600 mb-4 dark:text-gray-800">

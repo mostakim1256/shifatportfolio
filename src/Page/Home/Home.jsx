@@ -1,35 +1,63 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import logo from "../../../src/assets/Image/1234.png";
 import cv from "../../../src/assets/Image/shifat cv.pdf"
 import ab from "../../../src/assets/Image/portfolio.png"
-import html from "../../../src/assets/Image//html.jpeg"
+import html from "../../../src/assets/Image/html.jpeg"
 import css from "../../../src/assets/Image/css.webp"
 import as from "../../../src/assets/Image/js.webp"
 import aw from "../../../src/assets/Image/react.webp"
 import ad from "../../../src/assets/Image/next.webp"
 import af from "../../../src/assets/Image/angular.webp"
 import Image from "../../../src/assets/Image/card2image.webp"
+
 const Home = () => {
+    const typedRef = useRef(null);
+
+    useEffect(() => {
+        const options = {
+            strings: [
+                "Frontend Developer",
+
+                "I build Modern Web Applications"
+            ],
+            typeSpeed: 50,
+            backSpeed: 40,
+            backDelay: 1000,
+            loop: true,
+        };
+
+        const typed = new Typed(typedRef.current, options);
+
+        return () => typed.destroy();
+    }, []);
+
     return (
         <div>
             {/* HERO SECTION */}
             <section
                 className="
-          min-h-screen
-          px-6 lg:px-20 py-20
-          flex items-center justify-between
-          bg-gradient-to-r from-green-300 via-white to-green-200
-          animate-gradient
-        "
+                    min-h-screen
+                    px-6 lg:px-20 py-20
+                    flex items-center justify-between
+                    bg-gradient-to-r from-green-300 via-white to-green-200
+                    animate-gradient
+                "
             >
                 {/* LEFT SIDE TEXT */}
                 <div className="max-w-xl space-y-6 ml-0 md:ml-64">
+                    {/* Stable Text */}
                     <h1 className="text-black text-4xl md:text-6xl font-bold leading-tight dark:text-black">
                         Hi, I'm <span className="text-green-400">Sifat</span>
-                        <br />
-                        Frontend Developer
                     </h1>
 
+                    {/* Typed Animated Text */}
+                    <h2
+                        className="text-black text-3xl md:text-4xl font-bold mt-2"
+                        ref={typedRef}
+                    ></h2>
+
+                    {/* Description */}
                     <p className="text-gray-800 text-lg dark:text-gray-800">
                         I build modern, fast and responsive web applications using
                         <span className="text-green-400"> React</span>,
@@ -51,7 +79,6 @@ const Home = () => {
                                 Download CV
                             </a>
                         </button>
-
                     </div>
                 </div>
 
@@ -70,11 +97,11 @@ const Home = () => {
             {/* PROJECTS & SKILLS SECTION */}
             <section
                 className="
-          min-h-screen
-          px-6 lg:px-20 py-20
-          bg-gradient-to-r from-green-300 via-white to-green-200
-          animate-gradient
-        "
+                    min-h-screen
+                    px-6 lg:px-20 py-20
+                    bg-gradient-to-r from-green-300 via-white to-green-200
+                    animate-gradient
+                "
             >
                 <div className="ml-0 md:ml-64 w-full">
                     <h2 className="text-4xl md:text-5xl font-bold text-green-700 mb-12 text-center md:text-left dark:text-green-700">
@@ -138,10 +165,10 @@ const Home = () => {
                             />
                             <div className="p-6">
                                 <h3 className="text-2xl font-semibold mb-2 text-black dark:text-black">
-                                    React Landing Page
+                                    Neste
                                 </h3>
                                 <p className="text-gray-600 mb-4 dark:text-gray-800">
-                                    Smooth animations and clean UI for landing page websites.
+                                    Smooth animations and clean UI for websites.
                                 </p>
                                 <a
                                     href="#"
@@ -180,11 +207,10 @@ const Home = () => {
                     {/* Programming / Tech Icons */}
                     <div className="flex gap-6 mt-16 flex-wrap justify-start">
                         <img src={html} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="HTML" />
-                        <img src={css} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="HTML" />
-                        <img src={as} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="HTML" />
-                        <img src={aw} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="HTML" />
-                        <img src={af} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="HTML" />
-
+                        <img src={css} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="CSS" />
+                        <img src={as} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="JavaScript" />
+                        <img src={aw} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="React" />
+                        <img src={af} className="w-36 h-36 border border-gray-500 border-2 hover:scale-110 duration-1000" alt="Angular" />
                     </div>
                 </div>
             </section>
