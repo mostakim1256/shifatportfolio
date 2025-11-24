@@ -83,7 +83,7 @@ const Home = () => {
                 </div>
 
                 {/* RIGHT SIDE IMAGE */}
-                <div className="mt-12 md:mt-0 md:mr-0 flex justify-center hover:scale-110 duration-1000 ml-24 h-94 w-54 md:w-auto">
+                <div className="mt-12 md:mt-0 md:mr-0 flex justify-center hover:scale-110 duration-1000 ml-24 h-100 w-100 md:w-auto">
                     <div className="w-80 h-99 overflow-hidden rounded-2xl bg-green-100 flex items-center justify-center shadow-xl">
                         <img
                             src={logo}
